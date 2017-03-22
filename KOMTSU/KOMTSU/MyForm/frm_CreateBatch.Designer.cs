@@ -34,7 +34,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(626, 543);
+            this.ClientSize = new System.Drawing.Size(919, 547);
             this.Name = "frm_CreateBatch";
             this.Text = "frm_CreateBatch";
             this.ResumeLayout(false);
