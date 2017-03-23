@@ -111,6 +111,14 @@ namespace KOMTSU
 			}
 		}
 		
+		public System.Data.Linq.Table<tbl_DataAutoComplete> tbl_DataAutoCompletes
+		{
+			get
+			{
+				return this.GetTable<tbl_DataAutoComplete>();
+			}
+		}
+		
 		public System.Data.Linq.Table<tbl_DEJP> tbl_DEJPs
 		{
 			get
@@ -182,6 +190,20 @@ namespace KOMTSU
 				return this.GetTable<tbl_MissImage_DEJP>();
 			}
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.LayHinhMoi_DeJP")]
+		public ISingleResult<LayHinhMoi_DeJPResult> LayHinhMoi_DeJP([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fbatchname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string username)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fbatchname, username);
+			return ((ISingleResult<LayHinhMoi_DeJPResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Insert_Loai1")]
+		public int Insert_Loai1([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IdImage", DbType="NVarChar(255)")] string idImage, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fBatchName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserName", DbType="NVarChar(255)")] string userName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_03", DbType="NVarChar(255)")] string truong_03, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_04", DbType="NVarChar(255)")] string truong_04, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_05", DbType="NVarChar(255)")] string truong_05, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_07", DbType="NVarChar(255)")] string truong_07, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_09", DbType="NVarChar(255)")] string truong_09, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_10", DbType="NVarChar(255)")] string truong_10, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_11", DbType="NVarChar(255)")] string truong_11, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_12", DbType="NVarChar(255)")] string truong_12, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="LoaiPhieu", DbType="NVarChar(255)")] string loaiPhieu)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idImage, fBatchName, userName, truong_03, truong_04, truong_05, truong_07, truong_09, truong_10, truong_11, truong_12, loaiPhieu);
+			return ((int)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_Batch")]
@@ -210,6 +232,8 @@ namespace KOMTSU
 		
 		private string _LoaiBatch;
 		
+		private System.Nullable<bool> _CoDeSo;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -234,6 +258,8 @@ namespace KOMTSU
     partial void OnTruongSo08Changed();
     partial void OnLoaiBatchChanging(string value);
     partial void OnLoaiBatchChanged();
+    partial void OnCoDeSoChanging(System.Nullable<bool> value);
+    partial void OnCoDeSoChanged();
     #endregion
 		
 		public tbl_Batch()
@@ -441,6 +467,26 @@ namespace KOMTSU
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CoDeSo", DbType="Bit")]
+		public System.Nullable<bool> CoDeSo
+		{
+			get
+			{
+				return this._CoDeSo;
+			}
+			set
+			{
+				if ((this._CoDeSo != value))
+				{
+					this.OnCoDeSoChanging(value);
+					this.SendPropertyChanging();
+					this._CoDeSo = value;
+					this.SendPropertyChanged("CoDeSo");
+					this.OnCoDeSoChanged();
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -620,6 +666,51 @@ namespace KOMTSU
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_DataAutoComplete")]
+	public partial class tbl_DataAutoComplete
+	{
+		
+		private long _Id;
+		
+		private string _DataAutoComplete;
+		
+		public tbl_DataAutoComplete()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.Always, DbType="BigInt NOT NULL IDENTITY", IsDbGenerated=true)]
+		public long Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this._Id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DataAutoComplete", DbType="NVarChar(400)")]
+		public string DataAutoComplete
+		{
+			get
+			{
+				return this._DataAutoComplete;
+			}
+			set
+			{
+				if ((this._DataAutoComplete != value))
+				{
+					this._DataAutoComplete = value;
+				}
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_DEJP")]
 	public partial class tbl_DEJP : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -659,6 +750,8 @@ namespace KOMTSU
 		private string _Truong_12;
 		
 		private string _LoaiPhieu;
+		
+		private System.Nullable<int> _IdPhieu;
 		
 		private System.Nullable<int> _Dem;
 		
@@ -706,6 +799,8 @@ namespace KOMTSU
     partial void OnTruong_12Changed();
     partial void OnLoaiPhieuChanging(string value);
     partial void OnLoaiPhieuChanged();
+    partial void OnIdPhieuChanging(System.Nullable<int> value);
+    partial void OnIdPhieuChanged();
     partial void OnDemChanging(System.Nullable<int> value);
     partial void OnDemChanged();
     partial void OnErrorChanging(System.Nullable<int> value);
@@ -1061,6 +1156,26 @@ namespace KOMTSU
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdPhieu", DbType="Int")]
+		public System.Nullable<int> IdPhieu
+		{
+			get
+			{
+				return this._IdPhieu;
+			}
+			set
+			{
+				if ((this._IdPhieu != value))
+				{
+					this.OnIdPhieuChanging(value);
+					this.SendPropertyChanging();
+					this._IdPhieu = value;
+					this.SendPropertyChanged("IdPhieu");
+					this.OnIdPhieuChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Dem", DbType="Int")]
 		public System.Nullable<int> Dem
 		{
@@ -1202,6 +1317,8 @@ namespace KOMTSU
 		
 		private string _LoaiPhieu;
 		
+		private System.Nullable<int> _IdPhieu;
+		
 		private System.Nullable<int> _Dem;
 		
 		private System.Nullable<int> _Error;
@@ -1248,6 +1365,8 @@ namespace KOMTSU
     partial void OnTruong_12Changed();
     partial void OnLoaiPhieuChanging(string value);
     partial void OnLoaiPhieuChanged();
+    partial void OnIdPhieuChanging(System.Nullable<int> value);
+    partial void OnIdPhieuChanged();
     partial void OnDemChanging(System.Nullable<int> value);
     partial void OnDemChanged();
     partial void OnErrorChanging(System.Nullable<int> value);
@@ -1603,6 +1722,26 @@ namespace KOMTSU
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdPhieu", DbType="Int")]
+		public System.Nullable<int> IdPhieu
+		{
+			get
+			{
+				return this._IdPhieu;
+			}
+			set
+			{
+				if ((this._IdPhieu != value))
+				{
+					this.OnIdPhieuChanging(value);
+					this.SendPropertyChanging();
+					this._IdPhieu = value;
+					this.SendPropertyChanged("IdPhieu");
+					this.OnIdPhieuChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Dem", DbType="Int")]
 		public System.Nullable<int> Dem
 		{
@@ -1744,6 +1883,8 @@ namespace KOMTSU
 		
 		private string _LoaiPhieu;
 		
+		private System.Nullable<int> _IdPhieu;
+		
 		private System.Nullable<int> _Dem;
 		
 		private System.Nullable<int> _Error;
@@ -1790,6 +1931,8 @@ namespace KOMTSU
     partial void OnTruong_12Changed();
     partial void OnLoaiPhieuChanging(string value);
     partial void OnLoaiPhieuChanged();
+    partial void OnIdPhieuChanging(System.Nullable<int> value);
+    partial void OnIdPhieuChanged();
     partial void OnDemChanging(System.Nullable<int> value);
     partial void OnDemChanged();
     partial void OnErrorChanging(System.Nullable<int> value);
@@ -2145,6 +2288,26 @@ namespace KOMTSU
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdPhieu", DbType="Int")]
+		public System.Nullable<int> IdPhieu
+		{
+			get
+			{
+				return this._IdPhieu;
+			}
+			set
+			{
+				if ((this._IdPhieu != value))
+				{
+					this.OnIdPhieuChanging(value);
+					this.SendPropertyChanging();
+					this._IdPhieu = value;
+					this.SendPropertyChanged("IdPhieu");
+					this.OnIdPhieuChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Dem", DbType="Int")]
 		public System.Nullable<int> Dem
 		{
@@ -2286,6 +2449,8 @@ namespace KOMTSU
 		
 		private string _LoaiPhieu;
 		
+		private System.Nullable<int> _IdPhieu;
+		
 		private System.Nullable<int> _Dem;
 		
 		private System.Nullable<int> _Error;
@@ -2332,6 +2497,8 @@ namespace KOMTSU
     partial void OnTruong_12Changed();
     partial void OnLoaiPhieuChanging(string value);
     partial void OnLoaiPhieuChanged();
+    partial void OnIdPhieuChanging(System.Nullable<int> value);
+    partial void OnIdPhieuChanged();
     partial void OnDemChanging(System.Nullable<int> value);
     partial void OnDemChanged();
     partial void OnErrorChanging(System.Nullable<int> value);
@@ -2687,6 +2854,26 @@ namespace KOMTSU
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdPhieu", DbType="Int")]
+		public System.Nullable<int> IdPhieu
+		{
+			get
+			{
+				return this._IdPhieu;
+			}
+			set
+			{
+				if ((this._IdPhieu != value))
+				{
+					this.OnIdPhieuChanging(value);
+					this.SendPropertyChanging();
+					this._IdPhieu = value;
+					this.SendPropertyChanged("IdPhieu");
+					this.OnIdPhieuChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Dem", DbType="Int")]
 		public System.Nullable<int> Dem
 		{
@@ -2816,9 +3003,7 @@ namespace KOMTSU
 		
 		private string _TienDoDEJP;
 		
-		private System.Nullable<bool> _CoDESO;
-		
-		private string _GroupName;
+		private string _NienHieu;
 		
 		private string _Page;
 		
@@ -2848,10 +3033,8 @@ namespace KOMTSU
     partial void OnTienDoDESOChanged();
     partial void OnTienDoDEJPChanging(string value);
     partial void OnTienDoDEJPChanged();
-    partial void OnCoDESOChanging(System.Nullable<bool> value);
-    partial void OnCoDESOChanged();
-    partial void OnGroupNameChanging(string value);
-    partial void OnGroupNameChanged();
+    partial void OnNienHieuChanging(string value);
+    partial void OnNienHieuChanged();
     partial void OnPageChanging(string value);
     partial void OnPageChanged();
     #endregion
@@ -3081,42 +3264,22 @@ namespace KOMTSU
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CoDESO", DbType="Bit")]
-		public System.Nullable<bool> CoDESO
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NienHieu", DbType="NVarChar(255)")]
+		public string NienHieu
 		{
 			get
 			{
-				return this._CoDESO;
+				return this._NienHieu;
 			}
 			set
 			{
-				if ((this._CoDESO != value))
+				if ((this._NienHieu != value))
 				{
-					this.OnCoDESOChanging(value);
+					this.OnNienHieuChanging(value);
 					this.SendPropertyChanging();
-					this._CoDESO = value;
-					this.SendPropertyChanged("CoDESO");
-					this.OnCoDESOChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GroupName", DbType="NVarChar(255)")]
-		public string GroupName
-		{
-			get
-			{
-				return this._GroupName;
-			}
-			set
-			{
-				if ((this._GroupName != value))
-				{
-					this.OnGroupNameChanging(value);
-					this.SendPropertyChanging();
-					this._GroupName = value;
-					this.SendPropertyChanged("GroupName");
-					this.OnGroupNameChanged();
+					this._NienHieu = value;
+					this.SendPropertyChanged("NienHieu");
+					this.OnNienHieuChanged();
 				}
 			}
 		}
@@ -3814,6 +3977,32 @@ namespace KOMTSU
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	public partial class LayHinhMoi_DeJPResult
+	{
+		
+		private string _Column1;
+		
+		public LayHinhMoi_DeJPResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="", Storage="_Column1", DbType="NVarChar(255)")]
+		public string Column1
+		{
+			get
+			{
+				return this._Column1;
+			}
+			set
+			{
+				if ((this._Column1 != value))
+				{
+					this._Column1 = value;
+				}
 			}
 		}
 	}

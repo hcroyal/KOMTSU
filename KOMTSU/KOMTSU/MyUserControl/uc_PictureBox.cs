@@ -118,7 +118,7 @@ namespace KOMTSU.MyUserControl
 
         }
 
-private void uc_PictureBox_Load(object sender, EventArgs e)
+        private void uc_PictureBox_Load(object sender, EventArgs e)
         {
             trackBar_Ngang.Value = Properties.Settings.Default.Zoom_Ngang;
             trackBar_Doc.Value = Properties.Settings.Default.Zoom_Doc;

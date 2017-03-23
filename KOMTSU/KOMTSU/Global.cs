@@ -19,10 +19,10 @@ namespace KOMTSU
         public static string Strtoken = "";
         public static string StrIdimage = "";
         public static string StrCheck = "";
-        public static string StrPath = @"\\10.10.10.248\...";
-        public static string Webservice = "http://10.10.10.248:8888/JEMS/";
+        public static string StrPath = @"\\10.10.10.248\KOMTSU$";
+        public static string Webservice = "http://10.10.10.248:8888/KOMTSU/";
         public static string LoaiPhieu = "";
-        public static string StrIdProject = "JEMS";
+        public static string StrIdProject = "KOMTSU";
         public static int FreeTime = 0;
     }
 }

@@ -37,22 +37,22 @@ namespace KOMTSU.MyForm
                 if (string.IsNullOrEmpty(temp))
                 {
                     try{
-                        //var getFilename =
-                        //    (from w in Global.db.LayHinhMoi_DeSo_QuanLyDuAn(Global.StrBatch, Global.StrUsername)
-                        //     select w.Column1).FirstOrDefault();
-                        //if (string.IsNullOrEmpty(getFilename))
-                        //{
-                        //    return "NULL";
-                        //}
-                        //lb_IdImage.Text = getFilename;
-                        //uc_PictureBox1.imageBox1.Image = null;
-                        //if (uc_PictureBox1.LoadImage(Global.Webservice + Global.StrBatch + "/" + getFilename, getFilename,
-                        //    Settings.Default.ZoomImage) == "Error")
-                        //{
-                        //    uc_PictureBox1.imageBox1.Image = Resources.svn_deleted;
-                        //    return "Error";
+                        var getFilename =
+                            (from w in Global.db.LayHinhMoi_DeJP(Global.StrBatch, Global.StrUsername)
+                             select w.Column1).FirstOrDefault();
+                        if (string.IsNullOrEmpty(getFilename))
+                        {
+                            return "NULL";
+                        }
+                        lb_IdImage.Text = getFilename;
+                        uc_PictureBox1.imageBox1.Image = null;
+                        if (uc_PictureBox1.LoadImage(Global.Webservice + Global.StrBatch + "/" + getFilename, getFilename,
+                            Settings.Default.ZoomImage) == "Error")
+                        {
+                            uc_PictureBox1.imageBox1.Image = Resources.svn_deleted;
+                            return "Error";
 
-                        //}
+                        }
                     }
                     catch (Exception i)
                     {
@@ -70,10 +70,8 @@ namespace KOMTSU.MyForm
                         return "Error";
                     }
                 }
-                //if (tabControl_Main.SelectedTabPage == tp_Asahi_Main)
-                //    uc_ASAHI1.txt_Truong02.Focus();
-                //else if (tabControl_Main.SelectedTabPage == tp_EIZEN_Main)
-                //    uc_EZIEN1.txt_Truong02.Focus();
+                if (tabControl_Main.SelectedTabPage == tp_Loai1_JP_Main)
+                    uc_DeJP_Loai11.txt_Truong03.Focus();
                 //else if (tabControl_Main.SelectedTabPage == tp_YAMAMOTO_Main)
                 //    uc_YAMAMOTO4.txt_Truong02.Focus();
                 //else if (tabControl_Main.SelectedTabPage == tp_YASUDA_Main)
@@ -100,20 +98,21 @@ namespace KOMTSU.MyForm
                                          where w.UserName == Global.StrUsername && w.fBatchName == Global.StrBatch
                                          select w.IdImage).Count().ToString();
 
-                tp_AEON_Main.PageVisible = false;
-                tp_Asahi_Main.PageVisible = false;
-                tp_EIZEN_Main.PageVisible = false;
-                tp_YAMAMOTO_Main.PageVisible = false;
-                tp_YASUDA_Main.PageVisible = false;
+                tp_Loai1_JP_Main.PageVisible = false;
+                tp_Loai2_JP_Main.PageVisible = false;
+                tp_Loai2_JP_Main.PageVisible = true;//tp_Loai1_JP_Main.PageVisible = false;
+                //tp_EIZEN_Main.PageVisible = false;
+                //tp_YAMAMOTO_Main.PageVisible = false;
+                //tp_YASUDA_Main.PageVisible = false;
 
                 menu_quanly.Enabled = false;
 
                 if (Global.StrRole == "DESO")
                 {
-                    if (Global.LoaiPhieu == "ASAHI")
-                        tp_Asahi_Main.PageVisible = true;
-                    else if (Global.LoaiPhieu == "EIZEN")
-                        tp_EIZEN_Main.PageVisible = true;
+                    if (Global.LoaiPhieu == "Loai1")
+                        tp_Loai1_JP_Main.PageVisible = true;
+                    else if (Global.LoaiPhieu == "Loai2")
+                        tp_Loai2_JP_Main.PageVisible = true;
                     else if (Global.LoaiPhieu == "YAMAMOTO")
                         tp_YAMAMOTO_Main.PageVisible = true;
                     else if (Global.LoaiPhieu == "YASUDA")
@@ -181,8 +180,8 @@ namespace KOMTSU.MyForm
                         MessageBox.Show("Không thể load hình!");
                         btn_logout_ItemClick(null, null);
                     }
-                    //uc_AEON1.ResetData();
-                    //uc_ASAHI1.ResetData();
+                    uc_DeJP_Loai11.ResetData();
+                    uc_DeJP_Loai21.ResetData();
                     //uc_EZIEN1.ResetData();
                     //uc_YAMAMOTO4.ResetData();
                     //uc_YASUDA1.ResetData();
@@ -193,24 +192,24 @@ namespace KOMTSU.MyForm
                 {
                     if (Global.StrRole == "DESO")
                     {
-                        //if (tabControl_Main.SelectedTabPage == tp_Asahi_Main)
-                        //{
-                        //    if (uc_ASAHI1.IsEmpty())
-                        //    {
-                        //        if (MessageBox.Show("Bạn đang để trống 1 hoặc nhiều trường. Bạn có muốn submit không? \r\nYes = Submit và chuyển qua hình khác<Nhấn Enter>\r\nNo = nhập lại trường trống cho hình này.<nhấn phím N>", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
-                        //            return;
-                        //    }
-                        //    uc_ASAHI1.SaveData_ASAHI(lb_IdImage.Text);
-                        //}
-                        //else if (tabControl_Main.SelectedTabPage == tp_EIZEN_Main)
-                        //{
-                        //    if (uc_EZIEN1.IsEmpty())
-                        //    {
-                        //        if (MessageBox.Show("Bạn đang để trống 1 hoặc nhiều trường. Bạn có muốn submit không? \r\nYes = Submit và chuyển qua hình khác<Nhấn Enter>\r\nNo = nhập lại trường trống cho hình này.<nhấn phím N>", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
-                        //            return;
-                        //    }
-                        //    uc_EZIEN1.SaveData_EIZEN(lb_IdImage.Text);
-                        //}
+                        if (tabControl_Main.SelectedTabPage == tp_Loai1_JP_Main)
+                        {
+                            if (uc_DeJP_Loai11.IsEmpty())
+                            {
+                                if (MessageBox.Show("Bạn đang để trống 1 hoặc nhiều trường. Bạn có muốn submit không? \r\nYes = Submit và chuyển qua hình khác<Nhấn Enter>\r\nNo = nhập lại trường trống cho hình này.<nhấn phím N>", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
+                                    return;
+                            }
+                            uc_DeJP_Loai11.SaveData_Loai1(lb_IdImage.Text);
+                        }
+                        else if (tabControl_Main.SelectedTabPage == tp_Loai2_JP_Main)
+                        {
+                            if (uc_DeJP_Loai21.IsEmpty())
+                            {
+                                if (MessageBox.Show("Bạn đang để trống 1 hoặc nhiều trường. Bạn có muốn submit không? \r\nYes = Submit và chuyển qua hình khác<Nhấn Enter>\r\nNo = nhập lại trường trống cho hình này.<nhấn phím N>", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
+                                    return;
+                            }
+                            uc_DeJP_Loai21.SaveData_Loai2(lb_IdImage.Text);
+                        }
                         //else if (tabControl_Main.SelectedTabPage == tp_YAMAMOTO_Main)
                         //{
                         //    if (uc_YAMAMOTO4.IsEmpty())
@@ -285,24 +284,24 @@ namespace KOMTSU.MyForm
                 
                 if (Global.StrRole == "DESO")
                 {
-                    //if (tabControl_Main.SelectedTabPage == tp_Asahi_Main)
-                    //{
-                    //    if (uc_ASAHI1.IsEmpty())
-                    //    {
-                    //        if (MessageBox.Show("Bạn đang để trống 1 hoặc nhiều trường. Bạn có muốn submit không? \r\nYes = Submit và chuyển qua hình khác<Nhấn Enter>\r\nNo = nhập lại trường trống cho hình này.<nhấn phím N>", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
-                    //            return;
-                    //    }
-                    //    uc_ASAHI1.SaveData_ASAHI(lb_IdImage.Text);
-                    //}
-                    //else if (tabControl_Main.SelectedTabPage == tp_EIZEN_Main)
-                    //{
-                    //    if (uc_EZIEN1.IsEmpty())
-                    //    {
-                    //        if (MessageBox.Show("Bạn đang để trống 1 hoặc nhiều trường. Bạn có muốn submit không? \r\nYes = Submit và chuyển qua hình khác<Nhấn Enter>\r\nNo = nhập lại trường trống cho hình này.<nhấn phím N>", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
-                    //            return;
-                    //    }
-                    //    uc_EZIEN1.SaveData_EIZEN(lb_IdImage.Text);
-                    //}
+                    if (tabControl_Main.SelectedTabPage == tp_Loai1_JP_Main)
+                    {
+                        if (uc_DeJP_Loai11.IsEmpty())
+                        {
+                            if (MessageBox.Show("Bạn đang để trống 1 hoặc nhiều trường. Bạn có muốn submit không? \r\nYes = Submit và chuyển qua hình khác<Nhấn Enter>\r\nNo = nhập lại trường trống cho hình này.<nhấn phím N>", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
+                                return;
+                        }
+                        uc_DeJP_Loai11.SaveData_Loai1(lb_IdImage.Text);
+                    }
+                    else if (tabControl_Main.SelectedTabPage == tp_Loai2_JP_Main)
+                    {
+                        if (uc_DeJP_Loai21.IsEmpty())
+                        {
+                            if (MessageBox.Show("Bạn đang để trống 1 hoặc nhiều trường. Bạn có muốn submit không? \r\nYes = Submit và chuyển qua hình khác<Nhấn Enter>\r\nNo = nhập lại trường trống cho hình này.<nhấn phím N>", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
+                                return;
+                        }
+                        uc_DeJP_Loai21.SaveData_Loai2(lb_IdImage.Text);
+                    }
                     //else if (tabControl_Main.SelectedTabPage == tp_YAMAMOTO_Main)
                     //{
                     //    if (uc_YAMAMOTO4.IsEmpty())
@@ -344,7 +343,7 @@ namespace KOMTSU.MyForm
 
         private void btn_quanlyuser_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-           // new frm_User().ShowDialog();
+            new frm_User().ShowDialog();
         }
 
         private void btn_qyanlybatch_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -354,7 +353,7 @@ namespace KOMTSU.MyForm
 
         private void btn_Zoomimage_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-           // new frm_ChangeZoom().ShowDialog();
+            new frm_ChangeZoom().ShowDialog();
         }
 
         private void btn_checkdeso_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -367,9 +366,9 @@ namespace KOMTSU.MyForm
         {
             if (e.Control && e.KeyCode == Keys.Enter)
                 btn_Start_Submit_Click(null, null);
-            if (e.Control && e.KeyCode == Keys.PageUp)
+            if (e.Control && e.KeyCode == Keys.Up)
                 uc_PictureBox1.btn_Xoaytrai_Click(null, null);
-            if (e.Control && e.KeyCode == Keys.PageDown)
+            if (e.Control && e.KeyCode == Keys.Down)
                 uc_PictureBox1.btn_xoayphai_Click(null, null);
             if (e.KeyCode == Keys.Escape)
             {
@@ -389,8 +388,31 @@ namespace KOMTSU.MyForm
                 //else if (tabControl_Main.SelectedTabPage == tp_YASUDA_Main)
                 //    uc_YASUDA1.txt_Truong03_1.Focus();
             }
+            if (e.KeyCode == Keys.Down)
+            {
+                SendKeys.Send("{Tab}");
+                SendKeys.Send("{Tab}");
+                SendKeys.Send("{Tab}");
+                SendKeys.Send("{Tab}");
+                SendKeys.Send("{Tab}");
+            }
+            if (e.KeyCode == Keys.Up)
+            {
+                SendKeys.Send("+{Tab}");
+                SendKeys.Send("+{Tab}");
+                SendKeys.Send("+{Tab}");
+                SendKeys.Send("+{Tab}");
+                SendKeys.Send("+{Tab}");
+            }
+            if (e.KeyCode == Keys.Right)
+            {
+                SendKeys.Send("{Tab}");
+            }
+            if (e.KeyCode == Keys.Left)
+            {
+                SendKeys.Send("+{Tab}");
+            }
         }
-
         private void btn_checkqc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             //Global.StrCheck = "CHECKQC";
@@ -424,6 +446,11 @@ namespace KOMTSU.MyForm
         {
             new frm_FreeTime().ShowDialog();
             Global.db_BPO.UpdateTimeFree(Global.Strtoken, Global.FreeTime);
+        }
+
+        private void btn_data_auto_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
         }
     }
 }

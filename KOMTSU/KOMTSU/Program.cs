@@ -30,7 +30,7 @@ namespace KOMTSU.MyForm
             {
                 temp = false;
                 Frm_Login a = new Frm_Login();
-                a.lb_programName.Text = "\n           Dự Án JEMS";
+                a.lb_programName.Text = "\n           Dự Án KOMATSU";
                 a.lb_vision.Text = "Phiên bản :";
                 a.grb_1.Text = "Thông Tin PC";
                 a.lb_machine.Text = "Tên PC :";
@@ -46,8 +46,8 @@ namespace KOMTSU.MyForm
                 a.btn_thoat.Text = "Thoát";
                 a.chb_hienthi.Text = "Hiển Thị";
                 a.chb_luu.Text = "Lưu";
-                a.lb_version.Text = @"1.1.2";
-                a.UrlUpdateVersion = @"\\10.10.10.254\DE_Viet\2017\JEMS\Tools";
+                a.lb_version.Text = @"1.0";
+                a.UrlUpdateVersion = @"\\10.10.10.254\DE_Viet\2017\...";
                 a.LoginEvent += a_LoginEvent;
                 a.ButtonLoginEven += a_ButtonLoginEven;
                 if (a.ShowDialog() == DialogResult.OK)
@@ -117,7 +117,7 @@ namespace KOMTSU.MyForm
             try
             {
                 iKiemtraLogin = Global.db_BPO.KiemTraLogin(username, password);
-                strVersion = (from w in Global.db_BPO.tbl_Versions where w.IDProject == "JEMS" select w.IDVersion).FirstOrDefault();
+                strVersion = (from w in Global.db_BPO.tbl_Versions where w.IDProject == Global.StrIdProject select w.IDVersion).FirstOrDefault();
                 role = (from w in Global.db_BPO.tbl_Users where w.Username == username select w.IDRole).FirstOrDefault();
                 if (!string.IsNullOrEmpty(role))
                     role = role.ToUpper();

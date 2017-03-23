@@ -33,12 +33,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.BonusSkins.v16.2" />
+    <Reference Include="DevExpress.BonusSkins.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DuAnJEMS\DuAnJEMS_QuanLyDuAn\JEMS\JEMS\bin\Debug\DevExpress.BonusSkins.v16.2.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.Charts.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\DuAnJEMS\DuAnJEMS_QuanLyDuAn\JEMS\JEMS\bin\Debug\DevExpress.Charts.v16.2.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Data.v16.2" />
+    <Reference Include="DevExpress.Data.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DuAnJEMS\DuAnJEMS_QuanLyDuAn\JEMS\JEMS\bin\Debug\DevExpress.Data.v16.2.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.Office.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\DuAnJEMS\DuAnJEMS_QuanLyDuAn\JEMS\JEMS\bin\Debug\DevExpress.Office.v16.2.Core.dll</HintPath>
@@ -47,12 +53,22 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\DuAnJEMS\DuAnJEMS_QuanLyDuAn\JEMS\JEMS\bin\Debug\DevExpress.Pdf.v16.2.Core.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.Printing.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DuAnJEMS\DuAnJEMS_QuanLyDuAn\JEMS\JEMS\bin\Debug\DevExpress.Printing.v16.2.Core.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.RichEdit.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\DuAnJEMS\DuAnJEMS_QuanLyDuAn\JEMS\JEMS\bin\Debug\DevExpress.RichEdit.v16.2.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Utils.v16.2" />
-    <Reference Include="DevExpress.Sparkline.v16.2.Core" />
+    <Reference Include="DevExpress.Sparkline.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DuAnJEMS\DuAnJEMS_QuanLyDuAn\JEMS\JEMS\bin\Debug\DevExpress.Sparkline.v16.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DuAnJEMS\DuAnJEMS_QuanLyDuAn\JEMS\JEMS\bin\Debug\DevExpress.Utils.v16.2.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.Utils.v16.2.UI, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\DuAnJEMS\DuAnJEMS_QuanLyDuAn\JEMS\JEMS\bin\Debug\DevExpress.Utils.v16.2.UI.dll</HintPath>
@@ -73,11 +89,44 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\DuAnJEMS\DuAnJEMS_QuanLyDuAn\JEMS\JEMS\bin\Debug\DevExpress.XtraCharts.v16.2.Wizard.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraEditors.v16.2" />
-    <Reference Include="DevExpress.Printing.v16.2.Core" />
-    <Reference Include="DevExpress.XtraGrid.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DuAnJEMS\DuAnJEMS_QuanLyDuAn\JEMS\JEMS\bin\Debug\DevExpress.XtraEditors.v16.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DuAnJEMS\DuAnJEMS_QuanLyDuAn\JEMS\JEMS\bin\Debug\DevExpress.XtraGrid.v16.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DuAnJEMS\DuAnJEMS_QuanLyDuAn\JEMS\JEMS\bin\Debug\DevExpress.XtraLayout.v16.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DuAnJEMS\DuAnJEMS_QuanLyDuAn\JEMS\JEMS\bin\Debug\DevExpress.XtraNavBar.v16.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DuAnJEMS\DuAnJEMS_QuanLyDuAn\JEMS\JEMS\bin\Debug\DevExpress.XtraPrinting.v16.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DuAnJEMS\DuAnJEMS_QuanLyDuAn\JEMS\JEMS\bin\Debug\DevExpress.XtraRichEdit.v16.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DuAnJEMS\DuAnJEMS_QuanLyDuAn\JEMS\JEMS\bin\Debug\DevExpress.XtraTreeList.v16.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DuAnJEMS\DuAnJEMS_QuanLyDuAn\JEMS\JEMS\bin\Debug\DevExpress.XtraVerticalGrid.v16.2.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageGlass.ImageBox">
+      <HintPath>..\..\..\DuAnJEMS\DuAnJEMS_QuanLyDuAn\JEMS\JEMS\bin\Debug\ImageGlass.ImageBox.dll</HintPath>
+    </Reference>
+    <Reference Include="LibraryLogin">
+      <HintPath>..\..\..\DuAnJEMS\DuAnJEMS_QuanLyDuAn\JEMS\JEMS\bin\Debug\LibraryLogin.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
@@ -102,6 +151,12 @@
       <DependentUpon>DataKomtsu.dbml</DependentUpon>
     </Compile>
     <Compile Include="Global.cs" />
+    <Compile Include="MyForm\frm_ChangeZoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\frm_ChangeZoom.designer.cs">
+      <DependentUpon>frm_ChangeZoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyForm\frm_CreateBatch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,17 +175,35 @@
     <Compile Include="MyForm\frm_Main.designer.cs">
       <DependentUpon>frm_Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="MyForm\XtraForm1.cs">
+    <Compile Include="MyForm\frm_User.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MyForm\XtraForm1.Designer.cs">
-      <DependentUpon>XtraForm1.cs</DependentUpon>
+    <Compile Include="MyForm\frm_User.designer.cs">
+      <DependentUpon>frm_User.cs</DependentUpon>
     </Compile>
-    <Compile Include="MyUserControl\uc_DeJP.cs">
+    <Compile Include="MyForm\frm_DataAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\frm_DataAuto.Designer.cs">
+      <DependentUpon>frm_DataAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControl\uc_DeJP_Loai2.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MyUserControl\uc_DeJP.designer.cs">
-      <DependentUpon>uc_DeJP.cs</DependentUpon>
+    <Compile Include="MyUserControl\uc_DeJP_Loai2.Designer.cs">
+      <DependentUpon>uc_DeJP_Loai2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControl\uc_DeJP_Row.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControl\uc_DeJP_Row.designer.cs">
+      <DependentUpon>uc_DeJP_Row.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControl\uc_DeJP_Loai1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControl\uc_DeJP_Loai1.designer.cs">
+      <DependentUpon>uc_DeJP_Loai1.cs</DependentUpon>
     </Compile>
     <Compile Include="MyUserControl\uc_PictureBox.cs">
       <SubType>UserControl</SubType>
@@ -146,6 +219,9 @@
     <None Include="DataKomtsu.dbml.layout">
       <DependentUpon>DataKomtsu.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="MyForm\frm_ChangeZoom.resx">
+      <DependentUpon>frm_ChangeZoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyForm\frm_CreateBatch.resx">
       <DependentUpon>frm_CreateBatch.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,8 +231,20 @@
     <EmbeddedResource Include="MyForm\frm_Main.resx">
       <DependentUpon>frm_Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyUserControl\uc_DeJP.resx">
-      <DependentUpon>uc_DeJP.cs</DependentUpon>
+    <EmbeddedResource Include="MyForm\frm_User.resx">
+      <DependentUpon>frm_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\frm_DataAuto.resx">
+      <DependentUpon>frm_DataAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControl\uc_DeJP_Loai2.resx">
+      <DependentUpon>uc_DeJP_Loai2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControl\uc_DeJP_Row.resx">
+      <DependentUpon>uc_DeJP_Row.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControl\uc_DeJP_Loai1.resx">
+      <DependentUpon>uc_DeJP_Loai1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyUserControl\uc_PictureBox.resx">
       <DependentUpon>uc_PictureBox.cs</DependentUpon>
@@ -199,9 +287,7 @@
   <ItemGroup>
     <None Include="Resources\svn_deleted.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="de\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

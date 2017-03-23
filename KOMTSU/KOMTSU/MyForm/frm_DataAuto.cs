@@ -10,9 +10,9 @@ using DevExpress.XtraEditors;
 
 namespace KOMTSU.MyForm
 {
-    public partial class XtraForm1 : DevExpress.XtraEditors.XtraForm
+    public partial class frm_DataAuto : DevExpress.XtraEditors.XtraForm
     {
-        public XtraForm1()
+        public frm_DataAuto()
         {
             InitializeComponent();
         }
