@@ -66,10 +66,8 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.tabControl_Main = new DevExpress.XtraTab.XtraTabControl();
-            this.tp_Loai1_JP_Main = new DevExpress.XtraTab.XtraTabPage();
-            this.uc_DeJP_Loai11 = new KOMTSU.MyUserControl.uc_DeJP_Loai1();
-            this.tp_Loai2_JP_Main = new DevExpress.XtraTab.XtraTabPage();
-            this.uc_DeJP_Loai21 = new KOMTSU.MyUserControl.uc_DeJP_Loai2();
+            this.tp_Asahi_Main = new DevExpress.XtraTab.XtraTabPage();
+            this.tp_EIZEN_Main = new DevExpress.XtraTab.XtraTabPage();
             this.tp_YAMAMOTO_Main = new DevExpress.XtraTab.XtraTabPage();
             this.tp_YASUDA_Main = new DevExpress.XtraTab.XtraTabPage();
             this.tp_AEON_Main = new DevExpress.XtraTab.XtraTabPage();
@@ -78,7 +76,6 @@
             this.btn_Submit_Logout = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Start_Submit = new DevExpress.XtraEditors.SimpleButton();
             this.uc_PictureBox1 = new KOMTSU.MyUserControl.uc_PictureBox();
-            this.btn_data_auto = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -86,8 +83,6 @@
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControl_Main)).BeginInit();
             this.tabControl_Main.SuspendLayout();
-            this.tp_Loai1_JP_Main.SuspendLayout();
-            this.tp_Loai2_JP_Main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
             this.SuspendLayout();
@@ -116,10 +111,9 @@
             this.btn_xuatexcel,
             this.btn_Zoomimage,
             this.btn_checkdeso,
-            this.btn_checkqc,
-            this.btn_data_auto});
+            this.btn_checkqc});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 19;
+            this.barManager1.MaxItemId = 17;
             // 
             // bar2
             // 
@@ -170,8 +164,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem4),
             new DevExpress.XtraBars.LinkPersistInfo(this.btn_nangsuat),
             new DevExpress.XtraBars.LinkPersistInfo(this.btn_tiendo),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btn_xuatexcel),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btn_data_auto)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btn_xuatexcel)});
             this.menu_quanly.Name = "menu_quanly";
             // 
             // btn_qyanlybatch
@@ -419,65 +412,40 @@
             this.tabControl_Main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl_Main.Location = new System.Drawing.Point(2, 2);
             this.tabControl_Main.Name = "tabControl_Main";
-            this.tabControl_Main.SelectedTabPage = this.tp_Loai1_JP_Main;
+            this.tabControl_Main.SelectedTabPage = this.tp_Asahi_Main;
             this.tabControl_Main.Size = new System.Drawing.Size(434, 558);
             this.tabControl_Main.TabIndex = 1;
             this.tabControl_Main.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.tp_Loai1_JP_Main,
-            this.tp_Loai2_JP_Main,
+            this.tp_Asahi_Main,
+            this.tp_EIZEN_Main,
             this.tp_YAMAMOTO_Main,
             this.tp_YASUDA_Main,
             this.tp_AEON_Main});
             // 
-            // tp_Loai1_JP_Main
+            // tp_Asahi_Main
             // 
-            this.tp_Loai1_JP_Main.Controls.Add(this.uc_DeJP_Loai11);
-            this.tp_Loai1_JP_Main.Name = "tp_Loai1_JP_Main";
-            this.tp_Loai1_JP_Main.Size = new System.Drawing.Size(428, 530);
-            this.tp_Loai1_JP_Main.Text = "Loại 1";
+            this.tp_Asahi_Main.Name = "tp_Asahi_Main";
+            this.tp_Asahi_Main.Size = new System.Drawing.Size(428, 539);
             // 
-            // uc_DeJP_Loai11
+            // tp_EIZEN_Main
             // 
-            this.uc_DeJP_Loai11.AutoScroll = true;
-            this.uc_DeJP_Loai11.AutoSize = true;
-            this.uc_DeJP_Loai11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uc_DeJP_Loai11.Location = new System.Drawing.Point(0, 0);
-            this.uc_DeJP_Loai11.Name = "uc_DeJP_Loai11";
-            this.uc_DeJP_Loai11.Size = new System.Drawing.Size(428, 530);
-            this.uc_DeJP_Loai11.TabIndex = 0;
-            // 
-            // tp_Loai2_JP_Main
-            // 
-            this.tp_Loai2_JP_Main.AutoScroll = true;
-            this.tp_Loai2_JP_Main.Controls.Add(this.uc_DeJP_Loai21);
-            this.tp_Loai2_JP_Main.Name = "tp_Loai2_JP_Main";
-            this.tp_Loai2_JP_Main.Size = new System.Drawing.Size(428, 530);
-            this.tp_Loai2_JP_Main.Text = "Loại 2";
-            // 
-            // uc_DeJP_Loai21
-            // 
-            this.uc_DeJP_Loai21.AutoScroll = true;
-            this.uc_DeJP_Loai21.AutoSize = true;
-            this.uc_DeJP_Loai21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uc_DeJP_Loai21.Location = new System.Drawing.Point(0, 0);
-            this.uc_DeJP_Loai21.Name = "uc_DeJP_Loai21";
-            this.uc_DeJP_Loai21.Size = new System.Drawing.Size(428, 530);
-            this.uc_DeJP_Loai21.TabIndex = 0;
+            this.tp_EIZEN_Main.Name = "tp_EIZEN_Main";
+            this.tp_EIZEN_Main.Size = new System.Drawing.Size(428, 539);
             // 
             // tp_YAMAMOTO_Main
             // 
             this.tp_YAMAMOTO_Main.Name = "tp_YAMAMOTO_Main";
-            this.tp_YAMAMOTO_Main.Size = new System.Drawing.Size(428, 530);
+            this.tp_YAMAMOTO_Main.Size = new System.Drawing.Size(428, 539);
             // 
             // tp_YASUDA_Main
             // 
             this.tp_YASUDA_Main.Name = "tp_YASUDA_Main";
-            this.tp_YASUDA_Main.Size = new System.Drawing.Size(428, 530);
+            this.tp_YASUDA_Main.Size = new System.Drawing.Size(428, 539);
             // 
             // tp_AEON_Main
             // 
             this.tp_AEON_Main.Name = "tp_AEON_Main";
-            this.tp_AEON_Main.Size = new System.Drawing.Size(428, 530);
+            this.tp_AEON_Main.Size = new System.Drawing.Size(428, 539);
             // 
             // panelControl3
             // 
@@ -525,13 +493,6 @@
             this.uc_PictureBox1.Size = new System.Drawing.Size(862, 592);
             this.uc_PictureBox1.TabIndex = 6;
             // 
-            // btn_data_auto
-            // 
-            this.btn_data_auto.Caption = "Data AutoComplete";
-            this.btn_data_auto.Id = 18;
-            this.btn_data_auto.Name = "btn_data_auto";
-            this.btn_data_auto.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_data_auto_ItemClick);
-            // 
             // frm_Main
             // 
             this.ClientSize = new System.Drawing.Size(1300, 645);
@@ -546,7 +507,7 @@
             this.KeyPreview = true;
             this.Name = "frm_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "KOMATSU";
+            this.Text = "KOMTSU";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Main_FormClosing);
             this.Load += new System.EventHandler(this.frm_Main_Load);
@@ -559,10 +520,6 @@
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabControl_Main)).EndInit();
             this.tabControl_Main.ResumeLayout(false);
-            this.tp_Loai1_JP_Main.ResumeLayout(false);
-            this.tp_Loai1_JP_Main.PerformLayout();
-            this.tp_Loai2_JP_Main.ResumeLayout(false);
-            this.tp_Loai2_JP_Main.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -609,8 +566,8 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraTab.XtraTabControl tabControl_Main;
-        private DevExpress.XtraTab.XtraTabPage tp_Loai1_JP_Main;
-        private DevExpress.XtraTab.XtraTabPage tp_Loai2_JP_Main;
+        private DevExpress.XtraTab.XtraTabPage tp_Asahi_Main;
+        private DevExpress.XtraTab.XtraTabPage tp_EIZEN_Main;
         private DevExpress.XtraTab.XtraTabPage tp_YAMAMOTO_Main;
         private DevExpress.XtraTab.XtraTabPage tp_YASUDA_Main;
         private DevExpress.XtraBars.BarButtonItem btn_Zoomimage;
@@ -618,9 +575,6 @@
         private DevExpress.XtraBars.BarButtonItem btn_checkqc;
         private DevExpress.XtraEditors.SimpleButton btn_Pause;
         private DevExpress.XtraTab.XtraTabPage tp_AEON_Main;
-        private MyUserControl.uc_DeJP_Loai2 uc_DeJP_Loai21;
-        private MyUserControl.uc_DeJP_Loai1 uc_DeJP_Loai11;
-        private DevExpress.XtraBars.BarButtonItem btn_data_auto;
     }
 }
 
